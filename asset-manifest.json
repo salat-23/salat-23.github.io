@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9bc5e6dd.css",
+    "main.js": "/static/js/main.010f8504.js",
+    "static/media/kotlin.png": "/static/media/kotlin.0e22a842339118ef9a10.png",
+    "static/media/c++.png": "/static/media/c++.5185ce2f4c945505ee4f.png",
+    "static/media/EveryRun.ttf": "/static/media/EveryRun.4985f167418fe55ebaa3.ttf",
+    "static/media/java.png": "/static/media/java.fdabd4e11f1235e4e8e0.png",
+    "static/media/vue.png": "/static/media/vue.b3eb5e3c484454b1de5c.png",
+    "static/media/telegram.png": "/static/media/telegram.be6948c6962cac4685eb.png",
+    "static/media/springboot.png": "/static/media/springboot.32242f4a6cd4371968ed.png",
+    "static/media/react.png": "/static/media/react.44319306359c7112276d.png",
+    "static/media/hibernate.png": "/static/media/hibernate.49032b6538b347684561.png",
+    "static/media/postgres.png": "/static/media/postgres.0f01e72cd7838bd183a5.png",
+    "static/media/menu.png": "/static/media/menu.fae9b3d8dc2042295ee2.png",
+    "static/media/c\u0000#.png": "/static/media/c#.fc430729bfa8902c06fd.png",
+    "static/media/javascript.png": "/static/media/javascript.266bd9fb2663dcc057b4.png",
+    "index.html": "/index.html",
+    "main.9bc5e6dd.css.map": "/static/css/main.9bc5e6dd.css.map",
+    "main.010f8504.js.map": "/static/js/main.010f8504.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bc5e6dd.css",
+    "static/js/main.010f8504.js"
+  ]
+}
