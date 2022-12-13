@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import "../styles/index.scss";
+
+import pl_java from "../images/pl_table/java.png";
+import pl_kotlin from "../images/pl_table/kotlin.png";
+import pl_c from "../images/pl_table/c.png";
+import pl_cpp from "../images/pl_table/cpp.png";
+import pl_css from "../images/pl_table/css.png";
+import pl_html from "../images/pl_table/html.png";
+import pl_javascript from "../images/pl_table/javascript.png";
+import pl_postgresql from "../images/pl_table/postgresql.png";
+import pl_sass from "../images/pl_table/sass.png";
+import pl_vue from "../images/pl_table/vue.png";
+import pl_react from "../images/pl_table/react.png";
+import pl_flutter from "../images/pl_table/flutter.png";
+import pl_android from "../images/pl_table/android.png";
+import BouncingImage from "../components/BouncingImage.astro";
+
+import someGal from "../images/anime/some_gal.png";
+import ded from "../images/anime/literallyded.png";
+import yui from "../images/anime/yuikon.png";
+---
+
+<Layout title="salat23">
+  <main>
+    <Header />
+    <h2 class="landing_section_header">
+      Programming languages and technologies
+    </h2>
+    <BouncingImage image={someGal} />
+    <BouncingImage
+      topOffset="1rem"
+      delay="0.2s"
+      rightOffset="0"
+      image={ded}
+      additionalStyle="max-width: 500px"
+    />
+    <BouncingImage
+      topOffset="20rem"
+      rightOffset="1rem"
+      delay="0.4s"
+      image={yui}
+      additionalStyle="max-height: 600px;"
+    />
+    <div class="pl_table_wrapper">
+      <div class="pl_table_container">
+        <table>
+          <tr>
+            <td></td>
+            <td><img src={pl_java} alt="" /></td>
+            <td></td>
+            <td><img src={pl_kotlin} alt="" /></td>
+            <td><img src={pl_c} alt="" /></td>
+          </tr>
+          <tr>
+            <td><img src={pl_android} alt="" /></td>
+            <td><img src={pl_cpp} alt="" /></td>
+            <td><img src={pl_css} alt="" /></td>
+            <td></td>
+            <td><img src={pl_html} alt="" /></td>
+          </tr>
+          <tr>
+            <td><img src={pl_javascript} alt="" /></td>
+            <td></td>
+            <td></td>
+            <td><img src={pl_postgresql} alt="" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><img src={pl_flutter} /></td>
+            <td></td>
+            <td><img src={pl_sass} alt="" /></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><img src={pl_vue} alt="" /></td>
+            <td><img src={pl_react} alt="" /></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style></style>

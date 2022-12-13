@@ -1,0 +1,44 @@
+---
+const { additionalStyle, min = "1600px", delay = 0, topOffset = 0, leftOffset = 0, rightOffset, image = "", bounceAmount = "10px" } = Astro.props;
+---
+
+<div class="bi_wrapper">
+  <div class="bi_content"><img style={additionalStyle} src={image} /></div>
+</div>
+
+<style define:vars={{ min, delay, topOffset, leftOffset: rightOffset==undefined?leftOffset:"none", bounceAmount, rightOffset: rightOffset==undefined?"none":rightOffset }}>
+  @keyframes bouncing {
+    0% {
+      transform: none;
+    }
+    49% {
+      transform: none;
+    }
+    50% {
+      transform: translateY(var(--bounceAmount));
+    }
+    100% {
+      transform: translateY(var(--bounceAmount));
+    }
+  }
+
+  .bi_wrapper {
+    position: relative;
+  }
+  .bi_content {
+    position: absolute;
+    top: var(--topOffset);
+    left: var(--leftOffset);
+    right: var(--rightOffset);
+  }
+  .bi_content img {
+    animation: 1s infinite bouncing;
+    animation-delay: var(--delay);
+  }
+
+  @media screen and (max-width: 1600px) {
+    .bi_content {
+        display: none;
+    }
+  }
+</style>

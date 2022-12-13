@@ -1,0 +1,12 @@
+---
+import "../styles/CinematicButton.scss";
+const { link, name, image } = Astro.props;
+---
+
+<div class="cinematicbutton_wrapper">
+  <div class="cinematicbutton_content">
+    <img src={image} alt="" />
+    <a href={link}></a>
+    <p>{name}</p>
+  </div>
+</div>

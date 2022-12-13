@@ -1,0 +1,79 @@
+$cinematicbutton_breakpoint: 620px;
+
+.cinematicbutton_wrapper {
+    display: inline-block;
+
+    @media only screen and (max-width: $cinematicbutton_breakpoint) {
+        display: block;
+    }
+}
+
+.cinematicbutton_content {
+    border: 0.3rem solid #fff;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 30rem;
+    min-height: 12rem;
+
+    overflow: hidden;
+
+
+    p {
+        color: #fff;
+        font-family: "Unbounded";
+        font-size: 4rem;
+        text-transform: lowercase;
+        letter-spacing: 1.1rem;
+        font-weight: bold;
+        text-shadow: 0.2rem 0.2rem black;
+        transition: all 1s;
+        z-index: 1;
+    }
+
+    &:hover {
+        p {
+            text-shadow: 0.1rem 0.5rem black;
+        }
+
+        img {
+            filter: blur(0.5rem);
+        }
+    }
+
+    img {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        filter: blur(0.1rem);
+        // margin: -5px -5px -5px -5px;
+    }
+
+    a,
+    a:visited {
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: $cinematicbutton_breakpoint) {
+        height: 15rem;
+
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+}

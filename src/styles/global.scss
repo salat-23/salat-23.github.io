@@ -1,0 +1,26 @@
+@import 'robotomono';
+@import 'unbounded';
+
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto Mono", sans-serif;
+    background-color: #161616;
+    font-size: 62.25%;
+}
+
+body, html {
+    height: 100%;
+}
+
+code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+}
+

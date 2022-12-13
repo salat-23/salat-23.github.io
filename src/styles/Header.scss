@@ -1,0 +1,54 @@
+.header_wrapper {
+    height: 100vh;
+    color: white;
+}
+
+.header_container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 700px) {
+        margin-top: 0rem;
+    }
+}
+
+.header_buttons {
+    & > * {
+        margin-bottom: 1rem;
+    }
+}
+
+.header_name_container {
+    font-size: 30rem;
+
+    @media only screen and (max-width: 700px) {
+        font-size: 7rem;
+    }
+}
+
+.header_description {
+    text-align: center;
+    font-size: 3rem;
+
+    @media only screen and (max-width: 700px) {
+        font-size: 1rem;
+    }
+}
+
+@keyframes header_description_floating {
+    0% {}
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    100% {}
+}
+
+.header_description_floating {
+    animation: 2s infinite header_description_floating
+}
