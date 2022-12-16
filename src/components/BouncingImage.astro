@@ -1,12 +1,32 @@
 ---
-const { additionalStyle, min = "1600px", delay = 0, topOffset = 0, leftOffset = 0, rightOffset, image = "", bounceAmount = "10px" } = Astro.props;
+const {
+  additionalStyle,
+  min = "1600px",
+  delay = 0,
+  topOffset = 0,
+  leftOffset = 0,
+  rightOffset,
+  image = "",
+  bounceAmount = "10px",
+} = Astro.props;
 ---
 
 <div class="bi_wrapper">
-  <div class="bi_content"><img style={additionalStyle} src={image} /></div>
+      <div class="bi_content">
+        <img style={additionalStyle} src={image} />
+      </div>
 </div>
 
-<style define:vars={{ min, delay, topOffset, leftOffset: rightOffset==undefined?leftOffset:"none", bounceAmount, rightOffset: rightOffset==undefined?"none":rightOffset }}>
+<style
+  define:vars={{
+    min,
+    delay,
+    topOffset,
+    leftOffset: rightOffset == undefined ? leftOffset : "none",
+    bounceAmount,
+    rightOffset: rightOffset == undefined ? "none" : rightOffset,
+  }}
+>
   @keyframes bouncing {
     0% {
       transform: none;
@@ -38,7 +58,7 @@ const { additionalStyle, min = "1600px", delay = 0, topOffset = 0, leftOffset = 
 
   @media screen and (max-width: 1600px) {
     .bi_content {
-        display: none;
+      display: none;
     }
   }
 </style>

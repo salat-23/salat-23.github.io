@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import WorkExamples from "../components/WorkExamples.astro";
 import "../styles/index.scss";
 
+import getParams from "../params.js"
+
 import pl_java from "../images/pl_table/java.png";
 import pl_kotlin from "../images/pl_table/kotlin.png";
 import pl_c from "../images/pl_table/c.png";
@@ -53,6 +55,9 @@ let sections = [
     text: "Making small and unique games with interesting gameplay.",
   },
 ];
+
+const url = Astro.request.url;
+const renderBouncing = getParams(url).anime;
 ---
 
 <Layout title="salat23">
@@ -61,22 +66,23 @@ let sections = [
     <Header />
     <h2 class="landing_section_header">
       Programming languages and technologies
+      {JSON.stringify(renderBouncing)}
     </h2>
-    <BouncingImage image={someGal} />
-    <BouncingImage
+    {renderBouncing ? <BouncingImage image={someGal} /> : ""}
+    {renderBouncing ? <BouncingImage
       topOffset="1rem"
       delay="0.2s"
       rightOffset="0"
       image={graphicTablet}
       additionalStyle="max-width: 500px"
-    />
-    <BouncingImage
+    /> : ""}
+    {renderBouncing ? <BouncingImage
       topOffset="50rem"
       rightOffset="1rem"
       delay="0.4s"
       image={keyboard}
       additionalStyle="max-width: 500px;"
-    />
+    /> : ""}
     <div class="pl_table_wrapper">
       <div class="pl_table_container">
         <table>
@@ -118,13 +124,8 @@ let sections = [
         </table>
       </div>
     </div>
-    <h2 class="landing_section_header">
-      What I do?
-    </h2>
+    <h2 class="landing_section_header">What I do?</h2>
     <WorkExamples sections={sections} />
-    <h2 class="landing_section_header">
-      Previous work experience
-    </h2>
-    
+    <h2 class="landing_section_header">Previous work experience</h2>
   </main>
 </Layout>
