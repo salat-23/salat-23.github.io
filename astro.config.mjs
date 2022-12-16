@@ -7,5 +7,4 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   site: 'https://salat-23.github.io',
-  output: 'server'
 });
