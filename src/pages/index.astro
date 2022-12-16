@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import WorkExamples from "../components/WorkExamples.astro";
 import "../styles/index.scss";
 
 import pl_java from "../images/pl_table/java.png";
@@ -19,15 +20,44 @@ import pl_android from "../images/pl_table/android.png";
 import BouncingImage from "../components/BouncingImage.astro";
 
 import someGal from "../images/anime/some_gal.png";
-import ded from "../images/anime/literallyded.png";
-import yui from "../images/anime/yuikon.png";
+
+import graphicTablet from "../images/other/gpi.png";
+import keyboard from "../images/other/keyboard.png";
 
 import cat from "../images/cat.jpg";
+
+import telegram from "../images/icons/telegram.png";
+import webdev from "../images/icons/webdev.png";
+import database from "../images/icons/database.png";
+import controller from "../images/icons/controller.png";
+
+let sections = [
+  {
+    image: webdev,
+    title: "Web development",
+    text: "Creating responsive websites from layouts. Javascript frameworks: react.js, vue.js, astro.",
+  },
+  {
+    image: telegram,
+    title: "Telegram chat bots",
+    text: "Highly scalable telegram bots with rich functionality.",
+  },
+  {
+    image: database,
+    title: "Backend development",
+    text: "Rest API's, web services, clean code, creating database.",
+  },
+  {
+    image: controller,
+    title: "Game programming",
+    text: "Making small and unique games with interesting gameplay.",
+  },
+];
 ---
 
 <Layout title="salat23">
   <main>
-	<img style="width: 0%; height: 0%;" src={cat}>
+    <img style="width: 0%; height: 0%;" src={cat} />
     <Header />
     <h2 class="landing_section_header">
       Programming languages and technologies
@@ -37,15 +67,15 @@ import cat from "../images/cat.jpg";
       topOffset="1rem"
       delay="0.2s"
       rightOffset="0"
-      image={ded}
+      image={graphicTablet}
       additionalStyle="max-width: 500px"
     />
     <BouncingImage
-      topOffset="20rem"
+      topOffset="50rem"
       rightOffset="1rem"
       delay="0.4s"
-      image={yui}
-      additionalStyle="max-height: 600px;"
+      image={keyboard}
+      additionalStyle="max-width: 500px;"
     />
     <div class="pl_table_wrapper">
       <div class="pl_table_container">
@@ -88,7 +118,13 @@ import cat from "../images/cat.jpg";
         </table>
       </div>
     </div>
+    <h2 class="landing_section_header">
+      What I do?
+    </h2>
+    <WorkExamples sections={sections} />
+    <h2 class="landing_section_header">
+      Previous work experience
+    </h2>
+    
   </main>
 </Layout>
-
-<style></style>

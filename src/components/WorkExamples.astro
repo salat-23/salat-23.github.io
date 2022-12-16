@@ -1,0 +1,22 @@
+---
+import "../styles/WorkExamples.scss";
+let sections = Astro.props.sections;
+---
+
+<div class="workexamples">
+  <div class="wrapper">
+    <div class="container">
+      <div class="content">
+        {
+          sections.map((element) => {
+            return <div class="description">
+              <img src={element.image} />
+              <h3>{element.title}</h3>
+              <p>{element.text}</p>
+            </div>;
+          })
+        }
+      </div>
+    </div>
+  </div>
+</div>

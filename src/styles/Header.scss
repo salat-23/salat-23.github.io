@@ -1,6 +1,9 @@
 .header_wrapper {
-    height: 100vh;
     color: white;
+
+    @media only screen and (min-width: 768px) {
+        height: 100vh;
+    }
 }
 
 .header_container {
@@ -17,17 +20,36 @@
 }
 
 .header_buttons {
-    & > * {
+    &>* {
         margin-bottom: 1rem;
     }
 }
 
 .header_name_container {
-    font-size: 30rem;
+    text-align: center;
+    font-size: 20rem;
+
+    p.email {
+        margin-top: 10rem;
+        font-size: 4rem;
+        color: #666 !important;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 15rem;
+        p.email {
+            font-size: 3rem;
+        }
+    }
 
     @media only screen and (max-width: 700px) {
-        font-size: 7rem;
+        font-size: 3.5rem;
+        p.email {
+                font-size: 1.7rem;
+            }
     }
+
+
 }
 
 .header_description {
